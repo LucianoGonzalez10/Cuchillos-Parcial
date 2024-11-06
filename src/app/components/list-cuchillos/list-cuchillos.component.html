@@ -1,0 +1,15 @@
+<app-nav-bar></app-nav-bar>
+<ul>
+    @for (item of listaCuchillos; track $index) {
+        <p>ID: {{item.id}}</p>
+        <p>Nombre: {{item.nombre}}</p>
+        <p>Tipo: {{item.tipo}}</p>
+        <p>Tipo de filo: {{item.tipoDeFilo}}</p>
+        <p>Longitud: {{item.longitud}}</p>
+        <p>Material Mango: {{item.materialMango}}</p>
+        <p>Material Hoja: {{item.materialHoja}}</p>
+        <p>Hoja: {{item.hoja}}</p>
+        <p>Longitud Total: {{item.longitudTotal}}</p>
+        <button (click)="eliminarCuchillo(item.id)"> Borrar Cuchillo </button>
+    }
+</ul>

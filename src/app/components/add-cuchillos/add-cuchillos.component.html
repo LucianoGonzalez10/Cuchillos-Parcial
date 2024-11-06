@@ -1,0 +1,47 @@
+<app-nav-bar></app-nav-bar>
+<form [formGroup]="formulario" (ngSubmit)="agregarCuchillo()">
+    <label for=""> Nombre: </label>
+    <input type="text" formControlName="nombre">
+    @if (formulario.controls['nombre'].getError('required') && formulario.controls['nombre'].touched) {
+        <p> El campo es requerido. </p>
+    }
+
+    <label for=""> Tipo de filo: </label>
+    <input type="text" formControlName="tipoDeFilo">
+    @if (formulario.controls['tipoDeFilo'].getError('required') && formulario.controls['tipoDeFilo'].touched) {
+        <p> El campo es requerido. </p>
+    }
+
+    <label for=""> Longitud: </label>
+    <input type="number" formControlName="longitud">
+    @if (formulario.controls['longitud'].getError('required') && formulario.controls['longitud'].touched) {
+        <p> El campo es requerido. </p>
+    }
+
+    <label for=""> materialMango: </label>
+    <input type="text" formControlName="materialMango">
+    @if (formulario.controls['materialMango'].getError('required') && formulario.controls['materialMango'].touched) {
+        <p> El campo es requerido. </p>
+    }
+
+    <label for=""> materialHoja: </label>
+    <input type="text" formControlName="materialHoja">
+    @if (formulario.controls['materialHoja'].getError('required') && formulario.controls['materialHoja'].touched) {
+        <p> El campo es requerido. </p>
+    }
+
+    <label for=""> hoja: </label>
+    <input type="text" formControlName="hoja">
+    @if (formulario.controls['hoja'].getError('required') && formulario.controls['hoja'].touched) {
+        <p> El campo es requerido. </p>
+    }
+
+    <label for=""> longitudTotal: </label>
+    <input type="number" formControlName="hoja">
+    @if (formulario.controls['longitudTotal'].getError('required') && formulario.controls['longitudTotal'].touched) {
+        <p> El campo es requerido. </p>
+    }
+    
+    <button> Agregar Cuchillo </button>
+</form>
+
